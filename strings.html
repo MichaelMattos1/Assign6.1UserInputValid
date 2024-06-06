@@ -14,27 +14,30 @@ Michael Mattos
 06JUNE2024
 MMATTOS83782@uat.edu
 -->
+
 <head>
     <title>InputValidation</title>
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-<header>Welcome to Michael's Input Validaition Page</header>
-<nav>
-    <h2>Navigation</h2>
-    <h3><a href="./index.html">Home</a><br>
-    <a href="./boards.html">Boards</a><br>
-    <a href="./game.html">Game Page</a><br>
-    <a href="./strings.html">Input Validation</a></h3>
-</nav>
-Is zip valid? <div id="zipTest"></div>
-<script>
-    var zipCode ="85288"
-var isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test("90210");
-document.getElementById("zipTest").innerHTML = isValidZip
-document.getElementById("").innerHTML
-</script>
+    <header>Welcome to Michael's Input Validaition Page</header>
+    <nav>
+        <h2>Navigation</h2>
+        <h3><a href="./index.html">Home</a><br>
+            <a href="./boards.html">Boards</a><br>
+            <a href="./game.html">Game Page</a><br>
+            <a href="./strings.html">Input Validation</a>
+        </h3>
+    </nav>
+    Is zip valid? <a id="zipCodeDis"></a> Valid? <div id="zipTest"></div>
+    <script>
+        var zipCode = "85288"
+        var isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test("90210");
+        document.getElementById("zipTest").innerHTML = isValidZip;
+        document.getElementById("zipCodeDis").innerHTML = zipCode;
+
+    </script>
 
 
 </body>
