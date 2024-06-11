@@ -18,6 +18,7 @@ MMATTOS83782@uat.edu
 <head>
     <title>InputValidation</title>
     <link rel="stylesheet" href="main.css">
+    <script src="code.js"></script>
 </head>
 
 <body>
@@ -30,15 +31,31 @@ MMATTOS83782@uat.edu
             <a href="./strings.html">Input Validation</a>
         </h3>
     </nav>
-    Is zip valid? <a id="zipCodeDis"></a> Valid? <div id="zipTest"></div>
+    <h2>input validation section</h2>
+    <div id="loginStatus">Press submit to login</div>
+    <p>
+        Please submit the following information for validation
+    </p>
+    <form id="creditSubmit" onsubmit="return false">
+        First Name: &nbsp;<input type="text" id="fName"><br>
+        Last Name: &ensp;<input type="text" id="lName"><br>
+        Zip Code: &emsp;<input type="number" id="zipCode"><br>
+        <br>
+        <input type="submit" onclick="checkCreds()">
+
+    </form>
+
+
+
+
+    <!-- Is zip valid? <a id="zipCodeDis"></a> Valid? <div id="zipTest"></div>
     <script>
         var zipCode = "85288"
         var isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test("90210");
         document.getElementById("zipTest").innerHTML = isValidZip;
         document.getElementById("zipCodeDis").innerHTML = zipCode;
 
-    </script>
-
+    </script> -->
 
 </body>
 
