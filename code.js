@@ -58,16 +58,41 @@ function checkCreds() {
     var zipCode;
     var fullName;
     var fullNameLength;
-    var zipCodeNum;
+    var zipCodeNumb;
 
     //extract required varaibles
     firstName = document.getElementById("fName").value;
-    console.log("the first name was inputted as: "+ firstName);
+    console.log("the first name was inputted as: " + firstName);
 
     lastName = document.getElementById("lName").value;
-    console.log("the last name was inputted as: "+ lastName);
-    
-    zipCode = document.getElementById("zipCode").value;
-    console.log("the zip code was inputted as: "+ zipCode);
+    console.log("the last name was inputted as: " + lastName);
 
+    zipCode = document.getElementById("zipCode").value;
+    console.log("the zip code was inputted as: " + zipCode);
+
+    fullName = firstName + " " + lastName;
+    console.log("The full name is: " + fullName);
+
+    fullNameLength = fullName.length;
+    console.log("The variable fullName has " + fullNameLength + " characters ")
+
+    zipCodeNumb = parseInt(zipCode);
+    console.log("The actual zip code number is " + zipCodeNumb);
+
+    //testing 2 tests, full name and zipcode
+
+    // the fullnamelength variable is being told that if said variable is greater than 20 characters it's invalid but it's also invalid if it's less than two characters.
+    if (fullNameLength > 20 || fullNameLength < 2) {
+        console.log("Invalid full name");
+        document.getElementById("loginStatus").innerHTML = "Invalid full name";
+        // this checks for the zipcode length to be equal to 5 if it is under or over that number it's invalid
+    } else if (zipCode.length != 5) {
+        console.log("Invalid zip code");
+        document.getElementById("loginStatus").innerHTML = "invalid zipcode";
+        // if everything checks out and his valid this will pop up telling you that you passed the checks
+    } else {
+        alert("User credientals passed, welcome to the site,  " + fullName);
+        document.getElementById("loginStatus").innerHTML = "credientals passed";
     }
+
+}
